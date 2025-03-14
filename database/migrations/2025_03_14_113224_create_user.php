@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
-class AddUser extends Migration
+return new class extends Migration
 {
     /**
      * Запуск миграции.
@@ -29,4 +29,4 @@ class AddUser extends Migration
         // Удаление пользователя
         User::where('email', 'email@email')->delete();
     }
-}
+};
