@@ -28,9 +28,9 @@ class BookController extends Controller
             $query->orderBy($request->input('sort_by'), $request->input('sort_direction', 'asc'));
         }
 
-        $books = $query->paginate(10);
+        $books = $query->paginate(1);
 
-        return view('books.index', compact('books'));
+        return view('books.index', compact('books'))->with('links', $books->links('vendor.pagination.custom'));
     }
 
     public function create()
@@ -61,11 +61,7 @@ class BookController extends Controller
 
     public function show(Book $book)
     {
-        // Преобразование BLOB в base64
         $coverImage = null;
-        if ($book->cover_image) {
-            $coverImage = 'data:image/jpeg;base64,' . base64_encode($book->cover_image);
-        } 
 
         return view('books.show', compact('book', 'coverImage'));
     }
