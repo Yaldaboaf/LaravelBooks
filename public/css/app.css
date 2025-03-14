@@ -37,7 +37,9 @@
 }
 
 .book-element img {
-    max-width: 100%;
+    width: 14em;
+    height: 10em;
+    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -113,6 +115,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="number"],
 form input[type="file"],
+form textarea,
 select {
     width: 100%;
     padding: 10px;
@@ -129,7 +132,6 @@ select {
     cursor: pointer;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
@@ -137,10 +139,11 @@ select {
     display: felx;
 }
 
-.books-container button{
-    margin: 1em 0em;
+.books-container .edit-button{
+    margin-top: 1em;
     width: 100%;
 }
+
 
 .special-button:hover {
     background: #2c3e50;
@@ -237,5 +240,72 @@ img {
 }
 
 .book-element .edit-button:hover {
+    background-color: #2c3e50;
+}
+
+.book-details {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.delete-form {
+    margin-top: 20px;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.book-actions {
+    margin-top: 20px;
+}
+
+.edit-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
     background-color: #2c3e50;
 }

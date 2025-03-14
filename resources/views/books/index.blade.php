@@ -41,7 +41,7 @@
         @endforeach
         
     @auth
-        <button href="{{ route('books.create') }}" class='special-button'>Добавить новую книгу</button>
+        <a href="{{ route('books.create') }}" class='edit-button'>Добавить новую книгу</a>
     @endauth
     </div>
 </div>
