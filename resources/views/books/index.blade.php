@@ -20,12 +20,11 @@
         <button type="submit" class='special-button'>Применить</button>
     </form>
     <div class='books-container'>
-        
         @foreach ($books as $book)
             <div class="book-element">
                 @if($book->cover_image)
                     <a href="{{ route('books.show', $book) }}">
-                        <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Обложка книги {{ $book->title }}" style="max-width: 200px;">
+                        <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Обложка книги {{ $book->title }}" style="max-width: 100%;">
                     </a>
                 @else
                     <p>Обложка отсутствует</p>
@@ -39,12 +38,11 @@
                 @endauth
             </div>
         @endforeach
-        
     @auth
         <a href="{{ route('books.create') }}" class='edit-button'>Добавить новую книгу</a>
     @endauth
     </div>
 </div>
 
-    {{ $books->appends(request()->query())->links('vendor.pagination.custom') }}
+{{ $books->appends(request()->query())->links('vendor.pagination.custom') }}
 @endsection

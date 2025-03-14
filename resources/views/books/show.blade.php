@@ -3,9 +3,9 @@
 @section('content')
     <div class="book-details">
         <h1>{{ $book->title }}</h1>
-        <p><strong>Автор:</strong> {{ $book->author }}</p>
+        <p><strong>Автор:</strong> <a href="{{ route('books.index', ['author' => $book->author]) }}">{{ $book->author }}</a></p>
         <p><strong>Год публикации:</strong> {{ $book->publication_year }}</p>
-        <p><strong>Жанр:</strong> {{ $book->genre }}</p>
+        <p><strong>Жанр:</strong> <a href="{{ route('books.index', ['genre' => $book->genre]) }}">{{ $book->genre }}</a></p>
         <p><strong>Количество страниц:</strong> {{ $book->page_count }}</p>
         <p><strong>Описание:</strong> {{ $book->description ?? 'Описание отсутствует' }}</p>
 

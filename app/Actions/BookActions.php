@@ -27,7 +27,7 @@ class BookActions
             $query->orderBy($request->input('sort_by'), $request->input('sort_direction', 'asc'));
         }
 
-        return $query->paginate(1);
+        return $query->paginate(10);
     }
 
     public function store(Request $request)
