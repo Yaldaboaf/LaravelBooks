@@ -19,7 +19,7 @@ class BookController extends Controller
     public function index(Request $request)
     {
         $books = $this->bookActions->index($request);
-        return view('books.index', compact('books'))->with('links', $books->links('vendor.pagination.custom'));
+        return view('books.index', compact('books', 'request'))->with('links', $books->links('vendor.pagination.custom'));
     }
 
     public function create()

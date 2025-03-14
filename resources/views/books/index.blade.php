@@ -46,5 +46,5 @@
     </div>
 </div>
 
-    {{ $books->links('vendor.pagination.custom') }}
+    {{ $books->appends(request()->query())->links('vendor.pagination.custom') }}
 @endsection
