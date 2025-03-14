@@ -21,7 +21,9 @@
 
 .book-element {
     width: calc(14em);
-    margin-bottom: 20px;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 5px;
@@ -297,6 +299,7 @@ img {
 .edit-button {
     text-decoration: none;
     display: inline-block;
+    height: 45px;
     padding: 8px 12px;
     background-color: #35424a;
     color: #ffffff;
